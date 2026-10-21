@@ -272,12 +272,14 @@
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	prompt_name = "cybersun crew"
-	you_are_text = "You are a syndicate operative on old ship, stuck in hostile space."
-	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Nanotrasen station nearby. Fix the ship, find a way to power it and follow your captain's orders."
-	important_text = "Obey orders given by your captain. DO NOT let the ship fall into enemy hands."
+	you_are_text = "You are a syndicate operative on a old ship waking from cryogenics, stuck in hostile space with hostile boarders."
+	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a list of malfunctions.. You are stuck here after a Nanotrasen Boarding Team jammed your systems, with a Nanotrasen station nearby. Fix the ship, find a way to power it and follow your captain's orders. This is NOT a antagonist role."
+	important_text = "Obey orders given by your captain. DO NOT let the ship fall into enemy hands, remember that you are NOT a antagonist and you must OPFOR or explicitly escalate to get into conflict with the main station, but fighting explorers over loot or if they come to you is fine."
 	outfit = /datum/outfit/syndicatespace/syndicrew
 	spawner_job_path = /datum/job/syndicate_cybersun
-	allow_custom_character = ALL
+	allow_custom_character = GHOSTROLE_TAKE_PREFS_APPEARANCE
+	quirks_enabled = TRUE
+	loadout_enabled = TRUE
 
 /obj/effect/mob_spawn/ghost_role/human/syndicatespace/special(mob/living/new_spawn, mob/mob_possessor, apply_prefs)
 	. = ..()
@@ -290,12 +292,14 @@
 /obj/effect/mob_spawn/ghost_role/human/syndicatespace/captain
 	name = "Syndicate Ship Captain"
 	prompt_name = "a cybersun captain"
-	you_are_text = "You are the captain of an old ship, stuck in hostile space."
-	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Nanotrasen station nearby. Command your crew and turn your ship into the most protected fortress."
-	important_text = "Protect the ship and secret documents in your backpack with your own life."
+	you_are_text = "You are the captain of an old ship, stuck in hostile space with hostile boarders."
+	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a list of malfunctions.. You are stuck here after a Nanotrasen Boarding Team jammed your systems, with a Nanotrasen station nearby. Command your crew and turn your ship into the most protected mobile fortress. This is NOT a antagonist role."
+	important_text = "Protect the ship and secret documents on your person with your own life, remember that you are NOT a antagonist and you must OPFOR or explicitly escalate to get into conflict with the main station, but fighting explorers over loot or if they come to you is fine."
 	outfit = /datum/outfit/syndicatespace/syndicaptain
 	spawner_job_path = /datum/job/syndicate_cybersun_captain
-	allow_custom_character = ALL
+	allow_custom_character = GHOSTROLE_TAKE_PREFS_APPEARANCE
+	quirks_enabled = TRUE
+	loadout_enabled = TRUE
 
 /obj/effect/mob_spawn/ghost_role/human/syndicatespace/captain/Destroy()
 	new /obj/structure/fluff/empty_sleeper/syndicate/captain(get_turf(src))

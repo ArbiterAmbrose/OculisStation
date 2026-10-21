@@ -4,6 +4,70 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 /proc/generate_password()
 	return "[pick(GLOB.phonetic_alphabet)] [rand(1000,9999)]"
 
+// forgottenship shuttle parts
+
+/obj/docking_port/stationary/forgottenship
+	name = "Syndicate Forgotten Ship"
+	shuttle_id = "forgottenship"
+	roundstart_template = /datum/map_template/shuttle/ruin/forgottenship
+	dir = SOUTH
+	width = 23
+	height = 30
+	dwidth = 11
+
+/obj/docking_port/mobile/forgottenship
+	name = "Syndicate Forgotten Ship"
+	shuttle_id = "forgottenship"
+	dir = SOUTH
+	dwidth = 11
+	width = 23
+	height = 23
+	launch_status = 0
+	callTime = 25 SECONDS
+	movement_force = list("KNOCKDOWN" = 0,"THROW" = 0)
+
+/obj/item/circuitboard/computer/forgottenship
+	name = "Syndicate Forgotten Ship"
+	greyscale_colors = CIRCUIT_COLOR_GENERIC
+	build_path = /obj/machinery/computer/shuttle/forgottenship
+
+/obj/item/circuitboard/computer/forgottenship/bridge
+	name = "Syndicate Forgotten Ship Bridge"
+	greyscale_colors = CIRCUIT_COLOR_GENERIC
+	build_path = /obj/machinery/computer/shuttle/forgottenship/bridge
+
+/obj/machinery/computer/shuttle/forgottenship
+	name = "Syndicate Forgotten Ship Console"
+	desc = "Used to control the Syndicate Forgotten Ship."
+	circuit = /obj/item/circuitboard/computer/forgottenship
+	shuttleId = "forgottenship"
+	possible_destinations = "whiteship_away;whiteship_home;whiteship_z4;whiteship_lavaland;forgottenship"
+
+/// Console used on the forgottenship bridge. Because the captain's sleeper has a GPS, we do not need to give the console one.
+/obj/machinery/computer/shuttle/forgottenship/bridge
+	name = "Syndicate Forgotten Ship Bridge Console"
+	desc = "Used to control the Syndicate Forgotten Ship."
+	circuit = /obj/item/circuitboard/computer/forgottenship/bridge
+
+/obj/machinery/computer/camera_advanced/shuttle_docker/forgottenship
+	name = "Syndicate Forgotten Ship Navigation Computer"
+	desc = "Used to designate a precise transit location for the Syndicate Forgotten Ship."
+	shuttleId = "forgottenship"
+	lock_override = NONE
+	shuttlePortId = "forgottenship"
+	jump_to_ports = list("whiteship_away" = 1, "whiteship_home" = 1, "whiteship_z4" = 1, "forgottenship" = 1)
+	view_range = 10
+	designate_time = 100
+	y_offset = -11
+
+/obj/machinery/computer/camera_advanced/shuttle_docker/forgottenship/Initialize(mapload)
+	. = ..()
+	GLOB.jam_on_wardec += src
+
+/obj/machinery/computer/camera_advanced/shuttle_docker/forgottenship/Destroy()
+	GLOB.jam_on_wardec -= src
+	return ..()
+
 /////////// forgottenship objects
 
 /obj/machinery/door/password/voice/sfc
@@ -125,4 +189,10 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	name = "Syndicate Forgotten Vault"
 	icon_state = "syndie-ship"
 	ambientsounds = list('sound/ambience/engineering/ambitech2.ogg', 'sound/ambience/engineering/ambitech3.ogg')
+	area_flags = NOTELEPORT
+
+/area/ruin/space/has_grav/powered/nanotrasen_boarding_vessel
+	name = "Nanotrasen Boarding Craft"
+	icon_state = "syndie-ship"
+	ambientsounds = list('sound/ambience/misc/ambidanger.ogg', 'sound/ambience/misc/ambidanger2.ogg', 'sound/ambience/general/ambigen8.ogg', 'sound/ambience/general/ambigen9.ogg')
 	area_flags = NOTELEPORT
