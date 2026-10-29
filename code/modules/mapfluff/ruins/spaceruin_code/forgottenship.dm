@@ -9,7 +9,7 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 /obj/docking_port/stationary/forgottenship
 	name = "Syndicate Forgotten Ship"
 	shuttle_id = "forgottenship"
-	roundstart_template = /datum/map_template/shuttle/ruin/forgottenship
+	roundstart_template = /datum/map_template/RandomRuins/SpaceRuins/forgottenship
 	dir = SOUTH
 	width = 23
 	height = 30
