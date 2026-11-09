@@ -1021,7 +1021,6 @@
 	req_access = list("syndicate")
 	},
 /obj/effect/spawner/random/exotic/antag_gear,
-/obj/effect/spawner/random/exotic/antag_gear,
 /obj/item/ammo_workbench_module/lethal_super/evil,
 /turf/open/floor/mineral/plastitanium/pod/dark,
 /area/ruin/space/has_grav/powered/syndicate_forgotten_vault)
@@ -1431,6 +1430,7 @@
 	req_access = list("syndicate")
 	},
 /obj/item/mod/module/noslip,
+/obj/effect/spawner/random/exotic/antag_gear,
 /turf/open/floor/mineral/plastitanium/pod/dark,
 /area/ruin/space/has_grav/powered/syndicate_forgotten_vault)
 "EA" = (
@@ -1556,6 +1556,8 @@
 	},
 /obj/item/pizzabox/bomb,
 /obj/item/pizzabox/bomb,
+/obj/effect/spawner/random/exotic/antag_gear,
+/obj/effect/spawner/random/exotic/antag_gear,
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/powered/nanotrasen_boarding_vessel)
 "IU" = (
@@ -1832,6 +1834,9 @@
 /obj/effect/spawner/random/entertainment/money_medium,
 /obj/effect/spawner/random/aimodule/harmless,
 /obj/effect/spawner/random/aimodule/harmless,
+/obj/item/circuitboard/machine/engine/propulsion,
+/obj/item/circuitboard/machine/engine/propulsion,
+/obj/item/circuitboard/machine/engine/propulsion,
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/powered/nanotrasen_boarding_vessel)
 "Ys" = (
@@ -3546,19 +3551,19 @@ aa
 aa
 aa
 aa
-ap
-ap
-ap
 aa
 aa
-ap
-ap
-ap
 aa
 aa
-ap
-ap
-ap
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -3606,13 +3611,13 @@ aa
 ap
 ap
 ap
-aa
-aa
+bZ
+bZ
 ap
 ap
 ap
-aa
-aa
+bZ
+bZ
 ap
 ap
 ap
@@ -3660,19 +3665,19 @@ aa
 aa
 aa
 ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
+bZ
+bZ
+bZ
+bZ
+bZ
+bZ
+bZ
+bZ
+bZ
+bZ
+bZ
+bZ
+bZ
 ap
 aa
 aa
